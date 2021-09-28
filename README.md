@@ -1,1 +1,1 @@
-![Screenshot](mydesigndtmoney.png)
+![Screenshot](/public/mydesigndtmoney.PNG)
