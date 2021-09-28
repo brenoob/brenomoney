@@ -32,7 +32,7 @@ html{
 }
 
 body{
-    background: var(---background);
+    background: var(--background);
     -webkit-font-smoothing: antialiased;//fonts do browser ficam um pouco mais nitidas vamos dizer assim
 }
 body, input, textarea, button { //porque estes por padrao nao importam a font do corpo do html entao subscrevo todos eles

@@ -12,14 +12,14 @@ export function Summary() {
                     <p>Entradas</p>
                     <img src={EntradaImg} alt="Entradas" />
                 </header>
-                <strong>R$ 1000,00</strong>
+                <strong>R$ 1.000,00</strong>
             </div>
             <div>
                 <header>
                     <p>Saídas</p>
                     <img src={SaidaImg} alt="Entradas" />
                 </header>
-                <strong>R$ -500,00</strong>
+                <strong>R$ 500,00</strong>
             </div>
             <div className="total-green">
                 <header>
