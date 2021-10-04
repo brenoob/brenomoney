@@ -19,34 +19,56 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
 }
-//font-size:16px; e a padrao que vem ideal para (desktop)
-//entao 1rem = 16px
+
 html{
     @media(max-width: 1080px){
-        font-size: 93.75%; //16*0,9375= 15px 0,9375 e o mesmo que 15px so que em %
-    }                       //usa-se % porque mesmo se o cliente estiver com configuração de aumentar ou diminuir a fonte no celular ou computador
-                            //a % vai aumentar de acordo com a preferencia do usuario e sem a % ele vai fixar no valor que a gente passar  ex: sempre em 15px 
+        font-size: 93.75%; 
+    }
+    //16*0,875= 14px 87.5 e o mesmo que 14px so que em %                     
     @media(max-width: 720px){
-        font-size: 87.5%; //16*0,875= 14px 87.5 e o mesmo que 14px so que em %
+        font-size: 87.5%; 
     }
 }
 
 body{
     background: var(--background);
-    -webkit-font-smoothing: antialiased;//fonts do browser ficam um pouco mais nitidas vamos dizer assim
+    -webkit-font-smoothing: antialiased;
 }
-body, input, textarea, button { //porque estes por padrao nao importam a font do corpo do html entao subscrevo todos eles
+body, input, textarea, button { 
     font-family: 'Poppins', sans-serif;
-    font-weight: 400;//porque o tamanho da font do html normal e 500 e da poppins e 400
+    font-weight: 400;
 }
-h1, h2, h3, h4, h5, h6, strong { //tags de negrito
-    font-weight: 600;//que e o tamanho de negrito que quero na font poppins pois foi feito assim o layout do site
+h1, h2, h3, h4, h5, h6, strong { 
+    font-weight: 600;
 }
 button{
     cursor: pointer;
 }
 [disabled]{
-    opacity:0.6;
-    cursor:not-allowed;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.react-modal-overlay {
+    background: rgba(0, 0, 0, 0.5);
+
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.react-modal-content {
+    width: 100%;
+    max-width: 576px;
+    background: var(--background);
+    padding: 3rem;
+    position: relative;
+    border-radius: 0.24rem;
 }
 `;
