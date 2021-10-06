@@ -28,6 +28,10 @@ html{
     @media(max-width: 720px){
         font-size: 87.5%; 
     }
+    @media(max-width:425px){
+        display: flex;
+        font-size: 50%;
+    }
 }
 
 body{
@@ -70,5 +74,18 @@ button{
     padding: 3rem;
     position: relative;
     border-radius: 0.24rem;
+}
+.react-modal-fechar {
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    border: 0;
+    background: transparent;
+
+    transition: filter 0.2s;
+
+    &:hover{
+        filter: brightness(0.8);
+    }
 }
 `;
