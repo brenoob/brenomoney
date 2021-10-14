@@ -1,4 +1,4 @@
-import { darken } from 'polished';
+import { darken, transparentize } from 'polished';
 import styled from 'styled-components';
 
 
@@ -72,7 +72,7 @@ height: 4rem;
     border-radius: 0.25rem;
 
     background: ${(props) => props.isActive 
-    ? colors[props.activeColor] 
+    ? transparentize(0.8, colors[props.activeColor])
     : 'transparent'
     };
 
