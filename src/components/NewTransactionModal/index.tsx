@@ -4,6 +4,7 @@ import saidasImg from "../../assets/saidas.svg";
 import fecharImg from "../../assets/fechar.svg";
 import { Container, RadioBox, TransactionTypeContainer } from "./styles";
 import { FormEvent, useState } from "react";
+import { api } from "../../services/api";
 
 interface NewTransactionModalProps {
   isOpen: boolean;
@@ -21,11 +22,15 @@ export function NewTransactionModal({
   
     function handleCreateNewTransaction(event: FormEvent){
       event.preventDefault();
-      console.log(title);
-      console.log(value);
-      console.log(category);
-      console.log(type);
-    }
+
+      const data = {
+        title,
+        value,
+        category,
+        type,
+      };
+      api.post('/transactions', data)
+   }
   
   return (
     <Modal
